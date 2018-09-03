@@ -13,10 +13,21 @@ public class Login {
         btnSubmit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null,txtUserLogin.getText()
+                JOptionPane.showMessageDialog(null, txtUserLogin.getText()
                         + " " + new String(pwdUserPassword.getPassword()));
             }
         });
+        btnClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                txtUserLogin.setText("");
+                pwdUserPassword.setText("");
+            }
+        });
+    }
+        public JPanel getMainPanel(){
+        return mainPanel;
+        }
     }
 
-}
+
